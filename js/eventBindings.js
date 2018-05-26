@@ -1,13 +1,10 @@
 $(document).ready(function() {
-    $("#parameters").on("submit", function(e){
+    var paramsFormID = "#parameters";
+    $(paramsFormID).on("submit", function(e){
         e.preventDefault();
-        console.log("hit");
-        Crawler.startCrawl("#parameters");
-    });
-
-    $("#submit-parameters").on("click", function(e){
-        e.preventDefault();
-        console.log("hit");
-        Crawler.startCrawl("#parameters");
+        var url = $(paramsFormID).find("input[name='url']").first().val();
+        var depth = $(paramsFormID).find("input[name='depth']").first().val();
+        var includeAssets = $(paramsFormID).find("input[name='include-assets']").first().is(':checked');
+        Crawler.crawl(url, depth, includeAssets);
     });
 });
