@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>Web Crawler</title>
+    </head>
+    <body>
+        <div id="input">
+            <form id="parameters">
+                <label for="url">URL:</label>
+                <input type="text" name="url" id="url"><br/>
+                <label for="depth">Depth:</label>
+                <input type="number" name="depth" id="depth"><br/>
+                <input type="checkbox" name="include-assets" id="include-assets">
+                <label for="include-assets">Include assets?</label><br/>
+                <input type="submit" value="Crawl">
+            </form>
+        </div>
+        <hr>
+        <div id="output">
+        </div>
+    </body>
+</html>
